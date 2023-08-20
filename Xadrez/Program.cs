@@ -1,4 +1,5 @@
 ﻿using Xadrez.tabuleiro;
+using Xadrez.xadrez;
 
 
 namespace Xadrez
@@ -8,6 +9,9 @@ namespace Xadrez
         static void Main(string[] args)
         {
             Tabuleiro tab = new Tabuleiro(8,8);
+            tab.colocarPeca( new Torre(tab,Cor.Amarelo) ,new Posicao(0, 0));
+            tab.colocarPeca( new Torre(tab,Cor.Preto) ,new Posicao(0, 7));
+            tab.colocarPeca(new Rei(tab,Cor.Branco) ,new Posicao(0, 2));
             Tela.imprimirTabuleiro(tab);
         }
     }
